@@ -41,7 +41,7 @@ implemenmted in the solution.
 1. user and role management module.
 2. role and user permisison assignment both.
 3. user login management and ticket write read feature.
-4. left side menu and button authority management.
+4. left side menu and button authorization management.
 5. webapi user ticket authentication feature.
 
 The system  is designed for 3-tier distributed system, SOA based system, Repository pattern, POCO entity pattern, asp.net mvc/web api architecture. Some details can be described here:
