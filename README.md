@@ -26,17 +26,17 @@ SlickSafe 企业级权限快速开发框架，技术体系描述如下：Bootstr
 4.  采用WebApi实现服务总线;
 5.  前端Bootstrap3框架布局在线演示Demo实现；
 
-* SlickSafe框架在线DEMO：
+# SlickSafe框架在线DEMO：
 
 http://demo.slickflow.com/ssweb/
 
 用户名密码：admin/123456, jack/123456
 
-* QQ交流群：
+# QQ交流群：
 
 331928998
 
-* 快速入门指南：
+# SlickSafe 快速入门指南：
 
 http://www.cnblogs.com/slickflow/p/6478887.html
 
