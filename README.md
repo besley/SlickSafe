@@ -29,7 +29,7 @@ SlickSafe 企业级权限快速开发框架，技术体系描述如下：Bootstr
 SlickSafe框架在线DEMO及项目应用演示案例：
 
 http://demo.slickflow.com/ssweb/
-
+用户名密码：admin/123456, jack/123456
 
 QQ交流群：
 
