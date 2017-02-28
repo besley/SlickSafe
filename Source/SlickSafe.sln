@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlickOne.Biz", "SlickOne.Biz\SlickOne.Biz.csproj", "{79D7A322-276A-4FB5-B509-5219F3E80F63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{E1E5974B-F4E8-4DD2-AA02-BBD1DAA32BA0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{04D717B2-9561-4415-9D62-2C421179BC2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlickSafe.AuthImp", "SlickSafe.AuthImp\SlickSafe.AuthImp.csproj", "{97A875D4-3BEB-4402-B5B4-603A3B26ECF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlickSafe.Web", "SlickSafe.Web\SlickSafe.Web.csproj", "{CB8E4382-2B8F-43A7-9773-BAF599FA0C29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{57E27577-746D-4160-8680-B5CB95C4CF76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlickOne.Data", "SlickOne.Data\SlickOne.Data.csproj", "{E0A4FC43-54AF-49B3-A227-0CE9DB503903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper", "Dapper\Dapper.csproj", "{4DA6306B-B9F0-4E06-ACA0-2A1400DD9BD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlickOne.WebUtility", "SlickOne.WebUtility\SlickOne.WebUtility.csproj", "{B90DE653-F768-465A-BB23-3B5B4D89C96C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79D7A322-276A-4FB5-B509-5219F3E80F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D7A322-276A-4FB5-B509-5219F3E80F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D7A322-276A-4FB5-B509-5219F3E80F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D7A322-276A-4FB5-B509-5219F3E80F63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A875D4-3BEB-4402-B5B4-603A3B26ECF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A875D4-3BEB-4402-B5B4-603A3B26ECF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A875D4-3BEB-4402-B5B4-603A3B26ECF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A875D4-3BEB-4402-B5B4-603A3B26ECF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB8E4382-2B8F-43A7-9773-BAF599FA0C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB8E4382-2B8F-43A7-9773-BAF599FA0C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB8E4382-2B8F-43A7-9773-BAF599FA0C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB8E4382-2B8F-43A7-9773-BAF599FA0C29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0A4FC43-54AF-49B3-A227-0CE9DB503903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0A4FC43-54AF-49B3-A227-0CE9DB503903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0A4FC43-54AF-49B3-A227-0CE9DB503903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A4FC43-54AF-49B3-A227-0CE9DB503903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DA6306B-B9F0-4E06-ACA0-2A1400DD9BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DA6306B-B9F0-4E06-ACA0-2A1400DD9BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DA6306B-B9F0-4E06-ACA0-2A1400DD9BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DA6306B-B9F0-4E06-ACA0-2A1400DD9BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B90DE653-F768-465A-BB23-3B5B4D89C96C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B90DE653-F768-465A-BB23-3B5B4D89C96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B90DE653-F768-465A-BB23-3B5B4D89C96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B90DE653-F768-465A-BB23-3B5B4D89C96C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79D7A322-276A-4FB5-B509-5219F3E80F63} = {E1E5974B-F4E8-4DD2-AA02-BBD1DAA32BA0}
+		{97A875D4-3BEB-4402-B5B4-603A3B26ECF9} = {E1E5974B-F4E8-4DD2-AA02-BBD1DAA32BA0}
+		{CB8E4382-2B8F-43A7-9773-BAF599FA0C29} = {04D717B2-9561-4415-9D62-2C421179BC2B}
+		{E0A4FC43-54AF-49B3-A227-0CE9DB503903} = {57E27577-746D-4160-8680-B5CB95C4CF76}
+		{4DA6306B-B9F0-4E06-ACA0-2A1400DD9BD0} = {57E27577-746D-4160-8680-B5CB95C4CF76}
+		{B90DE653-F768-465A-BB23-3B5B4D89C96C} = {57E27577-746D-4160-8680-B5CB95C4CF76}
+	EndGlobalSection
+EndGlobal

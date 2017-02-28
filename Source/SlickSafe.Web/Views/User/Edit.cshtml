@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>用户添加/编辑</title>
+</head>
+<body>
+    <!-- Modal -->
+    <div>
+        <div class="modal-body">
+            <div>
+                <p>
+                    <span class="a_tit">用户名称:</span>
+                    <span><input type="text" id="txtUserName" class="form-control" style="width:340px;" /></span>
+                </p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" data-dismiss="modal" onclick="userlist.saveUser();">保存</button>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            userlist.loadUser();
+        })
+    </script>
+</body>
+</html>

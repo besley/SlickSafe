@@ -1,0 +1,11 @@
+﻿@{
+    Layout = "~/Views/Shared/mainlayout.cshtml";
+}
+
+<div id="myProcessGrid" class="grid-container" style="width:100%;height:300px;float:left;"></div>
+
+<script type="text/javascript">
+    $(function () {
+        processlist.getProcessList();
+    });
+</script>
