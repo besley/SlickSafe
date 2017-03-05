@@ -65,13 +65,15 @@ http://www.cnblogs.com/slickflow/p/6478887.html
 ~~~ xml
     <connectionStrings>
       <add name="SlickSafeDBConnectionString" 
-         connectionString="user id=dbadminOracle;password=123456;data source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XE)))"/>
+         connectionString="user id=dbadminOracle;password=1234;data source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XE)))"/>
     </connectionStrings>
 ~~~
 
 
 # 协议授权（License）
-支持LGPL开源协议(Open Source license)和商业授权许可协议(Commercial license)。
+支持LGPL开源协议(Open Source License)和商业授权许可协议(Commercial License)。
+
+Contact: sales@ruochisoft.com
 
 # Description
 
