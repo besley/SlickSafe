@@ -44,14 +44,14 @@ http://www.cnblogs.com/slickflow/p/6478887.html
 
 2. 权限系统支持Console, Winform 和 Web 各种类型的项目引用，数据库连接设置方法说明如下：
 
-  1) 在config 文件的appSettings中，添加如下设置：
+1) 在config 文件的appSettings中，添加如下设置：
 ~~~ xml
     <appSettings>
       <add key="WebAppDBConnectionString" value="SlickSafeDBConnectionString"/>
     </appSettings>
 ~~~ 
     其中WebAppDBConnectionString 是用于SlickOne.Data的数据访问组件的属性读取，对应的value数值是实际的数据库连接串.
-  2) 在config文件的connectionStrings 节中，添加数据库连接串属性.
+ 2) 在config文件的connectionStrings 节中，添加数据库连接串属性.
 
    # SQL SERVER数据库:
 ~~~ xml
