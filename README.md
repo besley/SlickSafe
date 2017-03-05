@@ -49,9 +49,8 @@ http://www.cnblogs.com/slickflow/p/6478887.html
     <appSettings>
       <add key="WebAppDBConnectionString" value="SlickSafeDBConnectionString"/>
     </appSettings>
-~~~
-      其中WebAppDBConnectionString 是用于SlickOne.Data的数据访问组件的属性读取，对应的value数值是实际的数据库连接串。
-
+~~~ 
+    其中WebAppDBConnectionString 是用于SlickOne.Data的数据访问组件的属性读取，对应的value数值是实际的数据库连接串.
   2) 在config文件的connectionStrings 节中，添加数据库连接串属性.
 
    # SQL SERVER数据库:
