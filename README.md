@@ -50,21 +50,21 @@ http://www.cnblogs.com/slickflow/p/6478887.html
       <add key="WebAppDBConnectionString" value="SlickOneDBConnectionString"/>
     </appSettings>
 ~~~
-    其中WebAppDBConnectionString 是用于SlickOne.Data的数据访问组件的属性读取，对应的value数值是实际的数据库连接串。
+      其中WebAppDBConnectionString 是用于SlickOne.Data的数据访问组件的属性读取，对应的value数值是实际的数据库连接串。
 
   2) 在config文件的connectionStrings 节中，添加数据库连接串属性.
 
    # SQL SERVER数据库:
 ~~~ xml
     <connectionStrings>
-      <add name="SlickOneDBConnectionString" connectionString="Data Source=127.0.0.1;Initial Catalog=SODB;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False" />
+        <add name="SlickOneDBConnectionString" connectionString="Data Source=127.0.0.1;Initial Catalog=SODB;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False" />
     </connectionStrings>
 ~~~
 
    # ORACLE 数据库:
 ~~~ xml
     <connectionStrings>
-  <add name="SlickOneDBConnectionString" 
+      <add name="SlickOneDBConnectionString" 
          connectionString="user id=dbadminOracle;password=123456;data source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XE)))"/>
     </connectionStrings>
 ~~~
@@ -73,7 +73,7 @@ http://www.cnblogs.com/slickflow/p/6478887.html
 # 协议授权（License）
 支持LGPL开源协议(Open Source license)和商业授权许可协议(Commercial license)。
 
-
+# Description
 
 SlickSafe is a web based user authentication system. There are some new features have been 
 implemenmted in the solution. 
