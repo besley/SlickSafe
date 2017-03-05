@@ -47,7 +47,7 @@ http://www.cnblogs.com/slickflow/p/6478887.html
   1) 在config 文件的appSettings中，添加如下设置：
 ~~~ xml
     <appSettings>
-      <add key="WebAppDBConnectionString" value="SlickOneDBConnectionString"/>
+      <add key="WebAppDBConnectionString" value="SlickSafeDBConnectionString"/>
     </appSettings>
 ~~~
       其中WebAppDBConnectionString 是用于SlickOne.Data的数据访问组件的属性读取，对应的value数值是实际的数据库连接串。
@@ -57,14 +57,14 @@ http://www.cnblogs.com/slickflow/p/6478887.html
    # SQL SERVER数据库:
 ~~~ xml
     <connectionStrings>
-        <add name="SlickOneDBConnectionString" connectionString="Data Source=127.0.0.1;Initial Catalog=SODB;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False" />
+        <add name="SlickSafeDBConnectionString" connectionString="Data Source=127.0.0.1;Initial Catalog=SODB;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False" />
     </connectionStrings>
 ~~~
 
    # ORACLE 数据库:
 ~~~ xml
     <connectionStrings>
-      <add name="SlickOneDBConnectionString" 
+      <add name="SlickSafeDBConnectionString" 
          connectionString="user id=dbadminOracle;password=123456;data source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XE)))"/>
     </connectionStrings>
 ~~~
