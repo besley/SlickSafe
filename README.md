@@ -45,24 +45,35 @@ http://www.cnblogs.com/slickflow/p/6478887.html
 1. 添加多数据库支持特性，默认支持SQLSERVER，也可以通过Dapper实现对ORACLE, MYSQL, KINGBASE等数据库的支持。
 
 2. 权限系统支持Console, Winform 和 Web 各种类型的项目引用，数据库连接设置方法说明如下：
+
 1) 在config 文件的appSettings中，添加如下设置：
+~~~ xml
   <appSettings>
     <add key="WebAppDBConnectionString" value="SlickOneDBConnectionString"/>
   </appSettings>
+~~~
   其中WebAppDBConnectionString 是用于SlickOne.Data的数据访问组件的属性读取，对应的value数值是实际的数据库连接串。
+
 2) 在config文件的connectionStrings 节中，添加数据库连接串属性.
    ## SQL SERVER数据库:
+~~~ xml
   <connectionStrings>
     <add name="SlickOneDBConnectionString" connectionString="Data Source=127.0.0.1;Initial Catalog=SODB;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False" />
   </connectionStrings>
+~~~
 
    ## ORACLE 数据库:
+~~~ xml
   <connectionStrings>
 <add name="SlickOneDBConnectionString" 
          connectionString="user id=dbadminOracle;password=123456;data source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XE)))"/>
   </connectionStrings>
+~~~
 
 3. 程序代码修改及配置请参阅文件: SessionFactory.cs
+
+# 协议授权（License）
+支持LGPL开源协议(Open Source license)和商业授权许可协议(Commercial license)。
 
 
 
@@ -92,5 +103,6 @@ application. Similarily, there are serveral key features to describe here:
 2. AG-Grid/zTree/Bootstrap-Dialog.
 3. NavBar in top and left side.
 4. Rich page demos in solution.
+
 
 
