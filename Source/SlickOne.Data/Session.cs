@@ -72,7 +72,7 @@ namespace SlickOne.Data
         /// 构造方法
         /// </summary>
         /// <param name="conn">连接</param>
-        public DbSession(IDbConnection conn)
+        internal DbSession(IDbConnection conn)
         {
             _connection = conn;
         }
@@ -82,7 +82,7 @@ namespace SlickOne.Data
         /// </summary>
         /// <param name="conn">连接</param>
         /// <param name="trans">事务</param>
-        public DbSession(IDbConnection conn, IDbTransaction trans)
+        internal DbSession(IDbConnection conn, IDbTransaction trans)
         {
             _connection = conn;
             _transaction = trans;
@@ -135,63 +135,6 @@ namespace SlickOne.Data
                 _connection = null;
             }
             GC.SuppressFinalize(this);
-        }
-    }
-
-    /// <summary>
-    /// Session 创建类
-    /// </summary>
-    public class SessionFactory
-    {
-        /// <summary>
-        /// 根据Provider类型，创建数据库连接
-        /// </summary>
-        /// <returns></returns>
-        private static IDbConnection CreateConnectionByProvider()
-        {
-            var connStringSetting = ConfigurationManager.ConnectionStrings["SlickSafeDBConnectionString"];
-            IDbConnection conn = new SqlConnection(connStringSetting.ConnectionString);
-
-            return conn;
-        }
-
-        /// <summary>
-        /// 创建数据库连接
-        /// </summary>
-        /// <returns></returns>
-        public static IDbConnection CreateConnection()
-        {
-            IDbConnection conn = CreateConnectionByProvider();
-
-            if (conn.State == ConnectionState.Closed)
-            {
-                conn.Open();
-            }
-            return conn;
-        }
-
-        /// <summary>
-        /// 创建数据库连接会话
-        /// </summary>
-        /// <returns></returns>
-        public static IDbSession CreateSession()
-        {
-            IDbConnection conn = CreateConnection();
-            IDbSession session = new DbSession(conn);
-
-            return session;
-        }
-
-        /// <summary>
-        /// 创建数据库事务会话
-        /// </summary>
-        /// <param name="conn"></param>
-        /// <param name="trans"></param>
-        /// <returns></returns>
-        public static IDbSession CreateSession(IDbConnection conn, IDbTransaction trans)
-        {
-            IDbSession session = new DbSession(conn, trans);
-            return session;
         }
     }
 }

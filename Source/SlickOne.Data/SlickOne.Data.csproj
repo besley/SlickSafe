@@ -43,13 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppSettingsWrapper.cs" />
+    <Compile Include="DBTypeExtensions.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="IWfDataProvider.cs" />
     <Compile Include="Pager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="ServiceBase.cs" />
     <Compile Include="Session.cs" />
+    <Compile Include="SessionFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dapper\Dapper.csproj">
