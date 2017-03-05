@@ -1,9 +1,10 @@
 ﻿# SlickSafe
 
-SlickSafe 企业级权限快速开发框架，技术体系描述如下：Bootstrap3/Mvc(WebApi)Dapper，AG-Grid/zTree优秀开源组件，Dapper针对MSSQL, MySQL, Oracle等多数据库的实现，丰富代码示例。
-
-
 # SlickSafe V1.2.0 版本说明
+
+
+
+SlickSafe 企业级权限快速开发框架，技术体系描述如下：Bootstrap3/Mvc(WebApi)Dapper，AG-Grid/zTree优秀开源组件，Dapper针对MSSQL, MySQL, Oracle等多数据库的实现，丰富代码示例。
 
 功能说明
 
@@ -38,6 +39,30 @@ http://demo.slickflow.com/ssweb/
 # SlickSafe 快速入门指南：
 
 http://www.cnblogs.com/slickflow/p/6478887.html
+
+# 数据库设置说明
+
+1. 添加多数据库支持特性，默认支持SQLSERVER，也可以通过Dapper实现对ORACLE, MYSQL, KINGBASE等数据库的支持。
+
+2. 权限系统支持Console, Winform 和 Web 各种类型的项目引用，数据库连接设置方法说明如下：
+1) 在config 文件的appSettings中，添加如下设置：
+  <appSettings>
+    <add key="WebAppDBConnectionString" value="SlickOneDBConnectionString"/>
+  </appSettings>
+  其中WebAppDBConnectionString 是用于SlickOne.Data的数据访问组件的属性读取，对应的value数值是实际的数据库连接串。
+2) 在config文件的connectionStrings 节中，添加数据库连接串属性.
+   ## SQL SERVER数据库:
+  <connectionStrings>
+    <add name="SlickOneDBConnectionString" connectionString="Data Source=127.0.0.1;Initial Catalog=SODB;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False" />
+  </connectionStrings>
+
+   ## ORACLE 数据库:
+  <connectionStrings>
+<add name="SlickOneDBConnectionString" 
+         connectionString="user id=dbadminOracle;password=123456;data source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XE)))"/>
+  </connectionStrings>
+
+3. 程序代码修改及配置请参阅文件: SessionFactory.cs
 
 
 
