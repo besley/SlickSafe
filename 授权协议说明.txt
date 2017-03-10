@@ -1,8 +1,8 @@
-ï»¿/*
-* SlickSafe ä¼ä¸šçº§æƒé™å¿«é€Ÿå¼€å‘æ¡†æ¶éµå¾ªLGPLåè®®ï¼Œä¹Ÿå¯è”ç³»ä½œè€…è·å–å•†ä¸šæˆæƒ
-* å’ŒæŠ€æœ¯æ”¯æŒæœåŠ¡ï¼›é™¤æ­¤ä¹‹å¤–çš„ä½¿ç”¨ï¼Œåˆ™è§†ä¸ºä¸æ­£å½“ä½¿ç”¨ï¼Œè¯·æ‚¨åŠ¡å¿…é¿å…ç”±æ­¤å¸¦æ¥çš„
-* å•†ä¸šç‰ˆæƒçº çº·ã€‚
-*
+/*
+* SlickSafe ÆóÒµ¼¶È¨ÏŞ¿ìËÙ¿ª·¢¿ò¼Ü×ñÑ­LGPLĞ­Òé£¬Ò²¿ÉÁªÏµ×÷Õß»ñÈ¡ÉÌÒµÊÚÈ¨
+* ºÍ¼¼ÊõÖ§³Ö·şÎñ£»³ı´ËÖ®ÍâµÄÊ¹ÓÃ£¬ÔòÊÓÎª²»Õıµ±Ê¹ÓÃ£¬ÇëÄúÎñ±Ø±ÜÃâÓÉ´Ë´øÀ´µÄ
+* ÉÌÒµ°æÈ¨¾À·×¡£
+* 
 The SlickSafe Product.
 Copyright (C) 2017  .NET Authorization Framework Software
 
@@ -20,30 +20,3 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, you can access the official
 web page about lgpl: https://www.gnu.org/licenses/lgpl.html
 */
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using SlickOne.WebUtility;
-
-namespace SlickSafe.Web.Controllers.Mvc
-{
-    /// <summary>
-    /// role controller
-    /// </summary>
-    public class RoleController : MvcAuthControllerBase
-    {
-        public ActionResult List()
-        {
-            return View();
-        }
-
-        // GET: Role
-        public ActionResult Edit()
-        {
-            return View();
-        }
-    }
-}

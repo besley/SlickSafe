@@ -1,9 +1,10 @@
 ﻿/*
-*  SlickSafe 企业级权限快速开发框架遵循LGPL协议，也可联系作者商业授权并获取技术支持；
-* 除此之外的使用则视为不正当使用，请您务必避免由此带来的商业版权纠纷。
-
-The SlickSafe project.
-Copyright (C) 2017  .NET Web Framwork Library
+* SlickSafe 企业级权限快速开发框架遵循LGPL协议，也可联系作者获取商业授权
+* 和技术支持服务；除此之外的使用，则视为不正当使用，请您务必避免由此带来的
+* 商业版权纠纷。
+*
+The SlickSafe Product.
+Copyright (C) 2017  .NET Authorization Framework Software
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
