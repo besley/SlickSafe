@@ -74,6 +74,8 @@ http://www.cnblogs.com/slickflow/p/6478887.html
 
 Contact: sales@ruochisoft.com
 
+QQ: 47743901(过河卒子)
+
 # Description
 
 SlickSafe is a web based user authentication system. There are some new features have been 
