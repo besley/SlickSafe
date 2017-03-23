@@ -41,16 +41,16 @@ namespace SlickSafe.Web.Controllers.WebApi
     /// </summary>
     public class LogDataController : ApiController
     {
-        private ILogDataService _logDataService;
-        protected ILogDataService LogDataService
+        private ILogService _logService;
+        protected ILogService LogService
         {
             get
             {
-                if (_logDataService == null)
+                if (_logService == null)
                 {
-                    _logDataService = new LogDataService();
+                    _logService = new LogService();
                 }
-                return _logDataService;
+                return _logService;
             }
         }
 
@@ -65,7 +65,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult<UserLogEntity>.Default();
             try
             {
-                var entity = LogDataService.Get(id);
+                var entity = LogService.Get(id);
                 result = ResponseResult<UserLogEntity>.Success(entity);
             }
             catch (System.Exception)
@@ -87,7 +87,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             try
             {
                 var count = 0;
-                var list = LogDataService.GetPaged(query, out count);
+                var list = LogService.GetPaged(query, out count);
 
                 result = ResponseResult<List<UserLogEntity>>.Success(list);
                 result.TotalRowsCount = count;
@@ -109,7 +109,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult<List<UserLogEntity>>.Default();
             try
             {
-                var list = LogDataService.GetPaged100();
+                var list = LogService.GetPaged100();
                 result = ResponseResult<List<UserLogEntity>>.Success(list);
             }
             catch (System.Exception)
@@ -117,6 +117,15 @@ namespace SlickSafe.Web.Controllers.WebApi
                 result = ResponseResult<List<UserLogEntity>>.Error("获取用户登录日志数据失败！");
             }
             return result;
+        }
+
+        /// <summary>
+        /// exception log list
+        /// </summary>
+        /// <returns></returns>
+        public ResponseResult GetExceptionList()
+        {
+            return null;
         }
 
         /// <summary>
@@ -130,7 +139,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult.Default();
             try
             {
-                LogDataService.Login(log);
+                LogService.Login(log);
                 result = ResponseResult.Success();
             }
             catch (System.Exception ex)
@@ -151,7 +160,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult.Default();
             try
             {
-                LogDataService.Logout(log);
+                LogService.Logout(log);
                 result = ResponseResult.Success();
             }
             catch (System.Exception ex)

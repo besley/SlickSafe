@@ -51,7 +51,7 @@ namespace SlickSafe.Web.Models
                 SessionGUID = sessionGUID,
                 IPAddress = ipaddress
             };
-            var url = string.Format("{0}/LogData/Login", WebApiApplication.WebAPIHostUrl);
+            var url = string.Format("{0}/Log/Login", WebApiApplication.WebAPIHostUrl);
             var clientHelper = HttpClientHelper.CreateHelper(url);
 
             clientHelper.Post<UserLogEntity, ResponseResult<UserLogEntity>>(logInfo);
@@ -74,7 +74,7 @@ namespace SlickSafe.Web.Models
                 IPAddress = ipAddress
             };
 
-            var url = string.Format("{0}/LogData/Logout", WebApiApplication.WebAPIHostUrl);
+            var url = string.Format("{0}/Log/Logout", WebApiApplication.WebAPIHostUrl);
             var clientHelper = HttpClientHelper.CreateHelper(url);
 
             clientHelper.Post<UserLogEntity, ResponseResult<UserLogEntity>>(log);

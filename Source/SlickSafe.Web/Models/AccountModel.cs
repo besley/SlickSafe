@@ -123,7 +123,7 @@ namespace SlickSafe.Web.Models
         /// <returns></returns>
         internal List<UserPermissionEntity> GetUserPermissionList(int userID, string ticket)
         {
-            var url = string.Format("{0}/PermissionData/GetUserPermissionList/{1}", 
+            var url = string.Format("{0}/PermissionUser/GetUserPermissionList/{1}", 
                 WebApiApplication.WebAPIHostUrl, userID);
             var clientHelper = HttpClientHelper.CreateHelper(url, ticket);
 

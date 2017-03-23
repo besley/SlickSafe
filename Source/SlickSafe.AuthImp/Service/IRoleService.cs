@@ -33,7 +33,7 @@ namespace SlickSafe.AuthImp.Service
     /// <summary>
     /// role service
     /// </summary>
-    public interface IRoleDataService
+    public interface IRoleService
     {
         IList<RoleEntity> GetRoleAll();
         void SaveRole(RoleEntity entity);

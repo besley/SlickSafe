@@ -24,35 +24,42 @@ web page about lgpl: https://www.gnu.org/licenses/lgpl.html
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using SlickOne.WebUtility;
 using SlickSafe.AuthImp.Entity;
+using SlickSafe.AuthImp.Service;
+using SlickSafe.Web.Filter;
 
-namespace SlickSafe.AuthImp.Service
+namespace SlickSafe.Web.Controllers.WebApi
 {
     /// <summary>
-    /// resource data service
+    /// permission data controller
     /// </summary>
-    public interface IResourceDataService
+    [BasicAuthentication]
+    public class PermissionUserController : ApiController
     {
-        List<ResourceEntity> GetResourceByUserID(int userID);
-        ResourceEntity SaveResource(ResourceEntity entity);
-        void DeleteResource(XmlTransferEntity xmlEntity);
-        void DeleteResource(int resourceID);
-        List<ResourceEntity> GetResourceAll();
-        ResourceNode GetResourceNodeAll();
-
-        ResourceNode[] GetLeftMenuList(int userID);
-
-        List<RoleResourcePermissionView> GetRoleResourceList(int roleID);
-        List<RoleResourcePermissionView> GetResourcePermissionAllowed(int userID);
-        void SaveRoleResourceList(List<RoleResourceEntity> entityList);
-        void ClearRoleResourceList(RoleResourceEntity entity);
-
-        
-        List<UserResourcePermissionView> RetrieveUserResourceList(int userID);
-        void SaveUserResourceList(List<UserResourceEntity> entityList);
-        void ClearUserResourceList(int userID);
-        List<UserPermissionEntity> GetUserPermissionList(int userID);
+        /// <summary>
+        /// get user permission list
+        /// </summary>
+        /// <param name="id">user id</param>
+        /// <returns></returns>
+        [HttpGet]
+        public ResponseResult<List<UserPermissionEntity>> GetUserPermissionList(int id)
+        {
+            var result = ResponseResult<List<UserPermissionEntity>>.Default();
+            try
+            {
+                var resourceService = new PermissionService();
+                var permissionList = resourceService.GetUserPermissionList(id);
+                result = ResponseResult<List<UserPermissionEntity>>.Success(permissionList);
+            }
+            catch (System.Exception ex)
+            {
+                result = ResponseResult<List<UserPermissionEntity>>.Error(ex.Message);
+            }
+            return result;
+        }
     }
 }

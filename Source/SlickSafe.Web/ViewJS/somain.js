@@ -62,7 +62,7 @@ var somain = (function () {
     function loadLeftMenuList(){
          //get userid from cookie
          var logonUserID = lsm.getWebLogonUserID();
-         jshelper.ajaxGet('api/ResourceData/GetLeftMenuList/' + logonUserID, null, function (result) {
+         jshelper.ajaxGet('api/PermissionData/GetLeftMenuList/' + logonUserID, null, function (result) {
 			if (result.Status === 1) {
                 var menuData = result.Entity;
 

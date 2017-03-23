@@ -68,7 +68,7 @@ var rolepermissionlist = (function () {
         displayTreeContainer(true);
     
         var query = {"RoleID": roleID};
-        jshelper.ajaxPost('api/ResourceData/GetRoleResourceList', JSON.stringify(query), function (result) {
+        jshelper.ajaxPost('api/PermissionData/GetRoleResourceList', JSON.stringify(query), function (result) {
 			if (result.Status === 1) {
 				var zNodes = [
 			         //{ id: 0, pId: -1, name: "权限列表", type: "root", open: true },
@@ -287,7 +287,7 @@ var rolepermissionlist = (function () {
         var resourcepermissionlist = getCheckedNodesList(rolepermissionlist.pselectedRoleID);       
         if (resourcepermissionlist.length > 0){
             //save role resource list
-            jshelper.ajaxPost('api/ResourceData/SaveRoleResourceList', JSON.stringify(resourcepermissionlist), 
+            jshelper.ajaxPost('api/PermissionData/SaveRoleResourceList', JSON.stringify(resourcepermissionlist), 
                 function (result) {
                     if (result.Status === 1){
                     	$.msgBox({
@@ -306,7 +306,7 @@ var rolepermissionlist = (function () {
         } else {
             //clear role resource list
             var entity = {"RoleID": rolepermissionlist.pselectedRoleID};
-            jshelper.ajaxPost('api/ResourceData/ClearRoleResourceList', JSON.stringify(entity), 
+            jshelper.ajaxPost('api/PermissionData/ClearRoleResourceList', JSON.stringify(entity), 
                 function (result) {
                     if (result.Status === 1){
                     	$.msgBox({

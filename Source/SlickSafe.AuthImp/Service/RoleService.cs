@@ -35,7 +35,7 @@ namespace SlickSafe.AuthImp.Service
     /// <summary>
     /// role data service implementation
     /// </summary>
-    public class RoleDataService : ServiceBase, IRoleDataService
+    public class RoleService : ServiceBase, IRoleService
     {
         /// <summary>
         /// get all role

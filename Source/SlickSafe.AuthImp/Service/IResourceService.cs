@@ -31,14 +31,15 @@ using SlickSafe.AuthImp.Entity;
 namespace SlickSafe.AuthImp.Service
 {
     /// <summary>
-    /// user log service
+    /// resource interface
     /// </summary>
-    public interface ILogDataService
+    public interface IResourceService
     {
-        UserLogEntity Get(int id);
-        List<UserLogEntity> GetPaged(UserLogQuery query, out int count);
-        List<UserLogEntity> GetPaged100();
-        void Login(UserLogEntity log);
-        void Logout(UserLogEntity log);
+        List<ResourceEntity> GetResourceByUserID(int userID);
+        ResourceEntity SaveResource(ResourceEntity entity);
+        void DeleteResource(XmlTransferEntity xmlEntity);
+        void DeleteResource(int resourceID);
+        List<ResourceEntity> GetResourceAll();
+        ResourceNode GetResourceNodeAll();
     }
 }

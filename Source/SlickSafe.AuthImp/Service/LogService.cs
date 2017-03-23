@@ -36,7 +36,7 @@ namespace SlickSafe.AuthImp.Service
     /// <summary>
     /// user log service
     /// </summary>
-    public class LogDataService : ServiceBase, ILogDataService
+    public class LogService : ServiceBase, ILogService
     {
         /// <summary>
         /// get single record

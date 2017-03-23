@@ -35,31 +35,181 @@ using SlickSafe.Web.Filter;
 namespace SlickSafe.Web.Controllers.WebApi
 {
     /// <summary>
-    /// permission data controller
+    /// permission include role permission and user permission
     /// </summary>
-    [BasicAuthentication]
+    [FormAuthCookieRequest]
     public class PermissionDataController : ApiController
     {
+        #region left menu data
         /// <summary>
-        /// get user permission list
+        /// get left menu data
         /// </summary>
-        /// <param name="id">user id</param>
         /// <returns></returns>
         [HttpGet]
-        public ResponseResult<List<UserPermissionEntity>> GetUserPermissionList(int id)
+        public ResponseResult<ResourceNode[]> GetLeftMenuList(int id)
         {
-            var result = ResponseResult<List<UserPermissionEntity>>.Default();
+            var result = ResponseResult<ResourceNode[]>.Default();
             try
             {
-                var resourceService = new ResourceDataService();
-                var permissionList = resourceService.GetUserPermissionList(id);
-                result = ResponseResult<List<UserPermissionEntity>>.Success(permissionList);
+                var resourceService = new PermissionService();
+                ResourceQuery query = new ResourceQuery { UserID = id };
+                var resourceNodes = resourceService.GetLeftMenuList(query.UserID);
+
+                result = ResponseResult<ResourceNode[]>.Success(resourceNodes);
             }
             catch (System.Exception ex)
             {
-                result = ResponseResult<List<UserPermissionEntity>>.Error(ex.Message);
+                result = ResponseResult<ResourceNode[]>.Error(
+                    string.Format("获取左侧导航资源数据失败！{0}", ex.Message)
+                );
             }
             return result;
         }
+        #endregion
+
+        #region role resource list
+        /// <summary>
+        /// get role resource list
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public ResponseResult<List<RoleResourcePermissionView>> GetRoleResourceList(ResourceQuery query)
+        {
+            var result = ResponseResult<List<RoleResourcePermissionView>>.Default();
+            try
+            {
+                var resourceService = new PermissionService();
+                var permissionList = resourceService.GetRoleResourceList(query.RoleID);
+
+                result = ResponseResult<List<RoleResourcePermissionView>>.Success(permissionList);
+            }
+            catch (System.Exception ex)
+            {
+                result = ResponseResult<List<RoleResourcePermissionView>>.Error(
+                    string.Format("获取角色资源权限数据失败！{0}", ex.Message)
+                );
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// save role resource data
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ResponseResult SaveRoleResourceList(List<RoleResourceEntity> entityList)
+        {
+            var result = ResponseResult.Default();
+            try
+            {
+                var resourceService = new PermissionService();
+                resourceService.SaveRoleResourceList(entityList);
+
+                result = ResponseResult.Success();
+            }
+            catch (System.Exception ex)
+            {
+                result = ResponseResult.Error(string.Format("保存角色资源授权数据失败!{0}", ex.Message));
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// clear role resource data
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ResponseResult ClearRoleResourceList(RoleResourceEntity entity)
+        {
+            var result = ResponseResult.Default();
+            try
+            {
+                var resourceService = new PermissionService();
+                resourceService.ClearRoleResourceList(entity);
+
+                result = ResponseResult.Success();
+            }
+            catch (System.Exception ex)
+            {
+                result = ResponseResult.Error(string.Format("清除角色资源授权数据失败!{0}", ex.Message));
+            }
+            return result;
+        }
+        #endregion
+
+        #region user resource list
+        /// <summary>
+        /// retrieve user resource data
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ResponseResult<List<UserResourcePermissionView>> RetrieveUserResourceList(ResourceQuery query)
+        {
+            var result = ResponseResult<List<UserResourcePermissionView>>.Default();
+            try
+            {
+                var resourceService = new PermissionService();
+                var permissionList = resourceService.RetrieveUserResourceList(query.UserID);
+
+                result = ResponseResult<List<UserResourcePermissionView>>.Success(permissionList);
+            }
+            catch (System.Exception ex)
+            {
+                result = ResponseResult<List<UserResourcePermissionView>>.Error(
+                    string.Format("获取用户资源权限数据失败！{0}", ex.Message)
+                );
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// save user resource data
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ResponseResult SaveUserResourceList(List<UserResourceEntity> entityList)
+        {
+            var result = ResponseResult.Default();
+            try
+            {
+                var resourceService = new PermissionService();
+                resourceService.SaveUserResourceList(entityList);
+
+                result = ResponseResult.Success();
+            }
+            catch (System.Exception ex)
+            {
+                result = ResponseResult.Error(string.Format("保存用戶资源授权数据失败!{0}", ex.Message));
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// clear user resource
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ResponseResult ClearUserResourceList(UserResourceEntity entity)
+        {
+            var result = ResponseResult.Default();
+            try
+            {
+                var resourceService = new PermissionService();
+                resourceService.ClearUserResourceList(entity.UserID);
+
+                result = ResponseResult.Success();
+            }
+            catch (System.Exception ex)
+            {
+                result = ResponseResult.Error(string.Format("清除用户自有资源授权数据失败!{0}", ex.Message));
+            }
+            return result;
+        }
+        #endregion
     }
 }

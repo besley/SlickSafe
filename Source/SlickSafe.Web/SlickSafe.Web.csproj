@@ -148,6 +148,7 @@
     <Compile Include="Controllers\WebApi\AccountController.cs" />
     <Compile Include="Controllers\WebApi\HelloWorldController.cs" />
     <Compile Include="Controllers\WebApi\PermissionDataController.cs" />
+    <Compile Include="Controllers\WebApi\PermissionUserController.cs" />
     <Compile Include="Controllers\WebApi\ResourceDataController.cs" />
     <Compile Include="Controllers\WebApi\RoleDataController.cs" />
     <Compile Include="Controllers\WebApi\LogDataController.cs" />

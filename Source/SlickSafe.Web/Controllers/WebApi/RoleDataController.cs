@@ -51,7 +51,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult<List<RoleEntity>>.Default();
             try
             {
-                var roleService = new RoleDataService();
+                var roleService = new RoleService();
                 var roleList = roleService.GetRoleAll().ToList();
 
                 result = ResponseResult<List<RoleEntity>>.Success(roleList);
@@ -76,7 +76,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult.Default();
             try
             {
-                var roleService = new RoleDataService();
+                var roleService = new RoleService();
                 roleService.SaveRole(entity);
 
                 result = ResponseResult.Success();
@@ -94,7 +94,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult.Default();
             try
             {
-                var roleService = new RoleDataService();
+                var roleService = new RoleService();
                 roleService.DeleteRole(entity);
 
                 result = ResponseResult.Success();
@@ -116,7 +116,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult<List<UserAccountEntity>>.Default();
             try
             {
-                var roleService = new RoleDataService();
+                var roleService = new RoleService();
                 var userList = roleService.GetUserAll().ToList();
 
                 result = ResponseResult<List<UserAccountEntity>>.Success(userList);
@@ -141,7 +141,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult.Default();
             try
             {
-                var roleService = new RoleDataService();
+                var roleService = new RoleService();
                 roleService.SaveUser(entity);
 
                 result = ResponseResult.Success();
@@ -164,7 +164,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult.Default();
             try
             {
-                var roleService = new RoleDataService();
+                var roleService = new RoleService();
                 roleService.DeleteUser(entity);
 
                 result = ResponseResult.Success();
@@ -186,7 +186,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult<List<RoleUserView>>.Default();
             try
             {
-                var roleService = new RoleDataService();
+                var roleService = new RoleService();
                 var userList = roleService.GetRoleUserAll().ToList();
 
                 result = ResponseResult<List<RoleUserView>>.Success(userList);
@@ -211,7 +211,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult.Default();
             try
             {
-                var roleService = new RoleDataService();
+                var roleService = new RoleService();
                 roleService.AddRoleUser(entity);
 
                 result = ResponseResult.Success();
@@ -234,7 +234,7 @@ namespace SlickSafe.Web.Controllers.WebApi
             var result = ResponseResult.Default();
             try
             {
-                var roleService = new RoleDataService();
+                var roleService = new RoleService();
                 roleService.DeleteRoleUser(entity);
 
                 result = ResponseResult.Success();

@@ -105,6 +105,10 @@ var loglist = (function(){
             }
 		});
 	}
+
+    loglist.getOperationList = function() {
+
+    }
 	//#endregion
 
     return loglist;

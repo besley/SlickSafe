@@ -69,12 +69,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\AccountService.cs" />
     <Compile Include="Service\IAccountService.cs" />
-    <Compile Include="Service\IResourceDataService.cs" />
-    <Compile Include="Service\IRoleDataService.cs" />
-    <Compile Include="Service\ILogDataService.cs" />
-    <Compile Include="Service\ResourceDataService.cs" />
-    <Compile Include="Service\RoleDataService.cs" />
-    <Compile Include="Service\LogDataService.cs" />
+    <Compile Include="Service\IPermissionService.cs" />
+    <Compile Include="Service\IResourceService.cs" />
+    <Compile Include="Service\IRoleService.cs" />
+    <Compile Include="Service\ILogService.cs" />
+    <Compile Include="Service\PermissionService.cs" />
+    <Compile Include="Service\ResourceService.cs" />
+    <Compile Include="Service\RoleService.cs" />
+    <Compile Include="Service\LogService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dapper\Dapper.csproj">
