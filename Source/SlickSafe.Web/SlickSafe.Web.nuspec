@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SlickSafe.Web</id>
+    <version>$version$</version>
+    <title>SlickSafe</title>
+    <authors>Besley</authors>
+    <owners>RuoChiSoft Ltd</owners>
+    <projectUrl>https://github.com/besley/SlickSafe</projectUrl>
+    <description>SlickSafe Web Project for User Authorization System</description>
+    <releaseNotes>V1.2.0</releaseNotes>
+    <copyright>Copyright2017</copyright>
+    <tags>Authorization NET Mvc WebApi</tags>
+  </metadata>
+</package>
