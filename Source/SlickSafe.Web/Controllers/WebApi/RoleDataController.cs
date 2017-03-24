@@ -28,8 +28,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using SlickOne.WebUtility;
-using SlickSafe.AuthImp.Entity;
-using SlickSafe.AuthImp.Service;
+using SlickSafe.AuthImpl.Entity;
+using SlickSafe.AuthImpl.Service;
 using SlickSafe.Web.Filter;
 
 

@@ -39,8 +39,8 @@ using System.Web.Http.Controllers;
 using Newtonsoft.Json;
 using SlickOne.WebUtility;
 using SlickOne.WebUtility.Security;
-using SlickSafe.AuthImp.Entity;
-using SlickSafe.AuthImp.Service;
+using SlickSafe.AuthImpl.Entity;
+using SlickSafe.AuthImpl.Service;
 
 namespace SlickSafe.Web.Filter
 {

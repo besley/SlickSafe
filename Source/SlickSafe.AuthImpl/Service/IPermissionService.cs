@@ -24,19 +24,28 @@ web page about lgpl: https://www.gnu.org/licenses/lgpl.html
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using SlickOne.WebUtility;
+using System.Text;
+using System.Threading.Tasks;
 using SlickSafe.AuthImpl.Entity;
 
-namespace SlickSafe.Web.Models
+namespace SlickSafe.AuthImpl.Service
 {
     /// <summary>
-    /// change password result
+    /// resource data service
     /// </summary>
-    public class ChangePasswordResult : ResponseResult<UserPassword>
+    public interface IPermissionService
     {
-        public int UserID { get; set; }
-        public string UserName { get; set; }
-        public string Ticket { get; set; }
+        ResourceNode[] GetLeftMenuList(int userID);
+
+        List<RoleResourcePermissionView> GetRoleResourceList(int roleID);
+        List<RoleResourcePermissionView> GetResourcePermissionAllowed(int userID);
+        void SaveRoleResourceList(List<RoleResourceEntity> entityList);
+        void ClearRoleResourceList(RoleResourceEntity entity);
+
+        
+        List<UserResourcePermissionView> RetrieveUserResourceList(int userID);
+        void SaveUserResourceList(List<UserResourceEntity> entityList);
+        void ClearUserResourceList(int userID);
+        List<UserPermissionEntity> GetUserPermissionList(int userID);
     }
 }

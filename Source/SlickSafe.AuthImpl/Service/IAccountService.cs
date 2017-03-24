@@ -24,19 +24,27 @@ web page about lgpl: https://www.gnu.org/licenses/lgpl.html
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using SlickOne.WebUtility;
+using System.Text;
+using System.Threading.Tasks;
 using SlickSafe.AuthImpl.Entity;
 
-namespace SlickSafe.Web.Models
+namespace SlickSafe.AuthImpl.Service
 {
     /// <summary>
-    /// change password result
+    /// user account service
     /// </summary>
-    public class ChangePasswordResult : ResponseResult<UserPassword>
+    public interface IAccountService
     {
-        public int UserID { get; set; }
-        public string UserName { get; set; }
-        public string Ticket { get; set; }
+        void Register(UserAccountEntity account);
+        void ChangePassword(string userName, string oldPassword, string newPassword);
+        UserAccountEntity GetById(int id);
+        UserAccountEntity GetByLoginName(string loginName);
+        UserAccountEntity GetByEmail(string email);
+        List<UserAccountEntity> GetPaged(UserAccountQuery query, out int count);
+        bool Update(UserAccountEntity account);
+        void Lock(int userID);
+        void UnLock(int userID);
+        void Discard(int userID);
+        string ResetPassword(int userID);
     }
 }

@@ -34,7 +34,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using SlickOne.WebUtility;
 using SlickOne.WebUtility.Security;
-using SlickSafe.AuthImp.Entity;
+using SlickSafe.AuthImpl.Entity;
 
 namespace SlickSafe.Web.Models
 {

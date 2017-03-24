@@ -30,8 +30,8 @@ using System.Web.Security;
 using System.Security.Cryptography;
 using SlickOne.Data;
 using SlickOne.WebUtility;
-using SlickSafe.AuthImp.Entity;
-using SlickSafe.AuthImp.Service;
+using SlickSafe.AuthImpl.Entity;
+using SlickSafe.AuthImpl.Service;
 
 
 namespace SlickSafe.Web.Controllers.WebApi

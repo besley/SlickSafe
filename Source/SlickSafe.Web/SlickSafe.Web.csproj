@@ -554,9 +554,9 @@
       <Project>{b90de653-f768-465a-bb23-3b5b4d89c96c}</Project>
       <Name>SlickOne.WebUtility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SlickSafe.AuthImp\SlickSafe.AuthImp.csproj">
+    <ProjectReference Include="..\SlickSafe.AuthImpl\SlickSafe.AuthImpl.csproj">
       <Project>{97a875d4-3beb-4402-b5b4-603a3b26ecf9}</Project>
-      <Name>SlickSafe.AuthImp</Name>
+      <Name>SlickSafe.AuthImpl</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

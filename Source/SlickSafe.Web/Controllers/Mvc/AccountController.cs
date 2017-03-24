@@ -31,7 +31,7 @@ using System.Net.Sockets;
 using System.Web.Security;
 using System.Threading.Tasks;
 using SlickOne.WebUtility;
-using SlickSafe.AuthImp.Entity;
+using SlickSafe.AuthImpl.Entity;
 using SlickSafe.Web.Models;
 
 namespace SlickSafe.Web.Controllers.Mvc
