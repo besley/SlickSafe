@@ -1,5 +1,43 @@
 ﻿# SlickSafe
 
+SlickSafe is a web based user authentication system. There are some new features have been 
+implemenmted in the solution. 
+
+1. user and role management module.
+2. role and user permisison assignment both.
+3. user login management and ticket write read feature.
+4. left side menu and button authorization management.
+5. webapi user ticket authentication feature.
+
+The system  is designed for 3-tier distributed system, SOA based system, Repository pattern, POCO entity pattern, asp.net mvc/web api architecture. Some details can be described here:
+
+1. The 3-tier distributed layer include: data access layer, buisiness logic layer and web presentation layer.
+2. Using micro-ORMapping framework Dapper/DapperExtension for database operation.
+3. Using Generic repository pattern to implement data access feature.
+4. Using Asp.net MVC WebAPI to implement service layer, webapi is a restful style service, we make it
+   to match different client include winform, web and mobile.
+5. The IRepository class can be used to implement EF, NHerbinate framework which the user prefered to them.
+6. MSSQL, MySQL, Oracle and other database supported by Dapper.
+ 
+The SlickSafe.Web project would give you a full tutorial how to use the SlickSafe library and webapi to create a rich mvc web
+application. Similarily, there are serveral key features to describe here:
+
+1. Bootstrap3/Mvc(WebApi)/Dapper.
+2. AG-Grid/zTree/Bootstrap-Dialog.
+3. NavBar in top and left side.
+4. Rich page demos in solution.
+
+# SlickSafe Online DEMO：
+
+http://demo.slickflow.com/ssweb/
+
+User/Pwd：admin/123456, jack/123456
+
+# EMAIL:
+
+sales@ruochisoft.com
+
+
 SlickSafe 企业级权限快速开发框架，技术体系描述如下：Bootstrap3/Mvc(WebApi)Dapper，AG-Grid/zTree优秀开源组件，Dapper针对MSSQL, MySQL, Oracle等多数据库的实现，丰富代码示例。
 
 # SlickSafe V1.2.0 版本说明
@@ -24,19 +62,6 @@ SlickSafe 企业级权限快速开发框架，技术体系描述如下：Bootstr
 5.  前端Bootstrap3框架布局在线演示Demo实现；
 6.  多数据库的支持，默认SQLSERVER，支持Oracle, MySQL, KingBase（人大金仓） 等数据库；
 
-# SlickSafe框架在线DEMO：
-
-http://demo.slickflow.com/ssweb/
-
-用户名密码：admin/123456, jack/123456
-
-# QQ交流群：
-
-331928998
-
-# SlickSafe 快速入门指南：
-
-http://www.cnblogs.com/slickflow/p/6478887.html
 
 # 数据库设置说明
 
@@ -72,38 +97,16 @@ http://www.cnblogs.com/slickflow/p/6478887.html
 # 协议授权（License）
 支持LGPL开源协议(Open Source License)和商业授权许可协议(Commercial License)。
 
+
+# SlickSafe 快速入门指南：
+
+http://www.cnblogs.com/slickflow/p/6478887.html
+
+
+# QQ交流群：331928998
+
 Contact: sales@ruochisoft.com
 
 QQ: 47743901(过河卒子)
-
-# Description
-
-SlickSafe is a web based user authentication system. There are some new features have been 
-implemenmted in the solution. 
-
-1. user and role management module.
-2. role and user permisison assignment both.
-3. user login management and ticket write read feature.
-4. left side menu and button authorization management.
-5. webapi user ticket authentication feature.
-
-The system  is designed for 3-tier distributed system, SOA based system, Repository pattern, POCO entity pattern, asp.net mvc/web api architecture. Some details can be described here:
-
-1. The 3-tier distributed layer include: data access layer, buisiness logic layer and web presentation layer.
-2. Using micro-ORMapping framework Dapper/DapperExtension for database operation.
-3. Using Generic repository pattern to implement data access feature.
-4. Using Asp.net MVC WebAPI to implement service layer, webapi is a restful style service, we make it
-   to match different client include winform, web and mobile.
-5. The IRepository class can be used to implement EF, NHerbinate framework which the user prefered to them.
-6. MSSQL, MySQL, Oracle and other database supported by Dapper.
- 
-The SlickSafe.Web project would give you a full tutorial how to use the SlickSafe library and webapi to create a rich mvc web
-application. Similarily, there are serveral key features to describe here:
-
-1. Bootstrap3/Mvc(WebApi)/Dapper.
-2. AG-Grid/zTree/Bootstrap-Dialog.
-3. NavBar in top and left side.
-4. Rich page demos in solution.
-
 
 
