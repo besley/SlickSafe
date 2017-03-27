@@ -4,8 +4,8 @@ SlickSafe is a web based user authentication system. There are some new features
 implemenmted in the solution. 
 
 1. user and role management module.
-2. role and user permisison assignment both.
-3. user login management and ticket write read feature.
+2. role and user permisison assignment feature
+3. user login management and ticket initialized feature.
 4. left side menu and button authorization management.
 5. webapi user ticket authentication feature.
 
