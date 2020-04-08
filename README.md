@@ -29,7 +29,7 @@ application. Similarily, there are serveral key features to describe here:
 
 # SlickSafe Online DEMO：
 
-http://demo.slickflow.com/ssweb/
+http://demo.slickflow.com/ssweb2/
 
 User/Pwd：admin/123456, jack/123456
 
