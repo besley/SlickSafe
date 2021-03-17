@@ -103,7 +103,7 @@ SlickSafe 企业级权限快速开发框架，技术体系描述如下：Bootstr
 http://www.cnblogs.com/slickflow/p/6478887.html
 
 
-# QQ交流群：331928998
+# QQ交流群：151650479
 
 Contact: sales@ruochisoft.com
 
